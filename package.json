@@ -1,0 +1,19 @@
+{
+  "name": "ex1",
+  "version": "1.0.0",
+  "description": "This is for the home exercise during the web interface course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t7haki01/ex1_web_interface.git"
+  },
+  "author": "kihun han",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t7haki01/ex1_web_interface/issues"
+  },
+  "homepage": "https://github.com/t7haki01/ex1_web_interface#readme"
+}

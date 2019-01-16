@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/t7haki01/ex1_web_interface/issues"
   },
-  "homepage": "https://github.com/t7haki01/ex1_web_interface#readme"
+  "homepage": "https://github.com/t7haki01/ex1_web_interface#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9"
+  }
 }

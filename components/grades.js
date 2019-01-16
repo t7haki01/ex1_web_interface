@@ -56,7 +56,7 @@ router.put('/:id', (req, res) => {
             }
             if(isAllowed){
                 grades[i].Id = parseInt(req.body.Id);
-                gradets[i].Course = req.body.Course;
+                grades[i].Course = req.body.Course;
                 grades[i].Student = req.body.Student;
                 grades[i].Grade = req.body.Grade;
                 var result = grades[i]

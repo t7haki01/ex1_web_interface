@@ -101,6 +101,11 @@ router.post('/:id/addStudents', (req, res) => {
             }
             if(!isEnrolled){
                 courses[i].enrolledStudents.push(parseInt(req.body.Student));
+                for(var k = 0; k<data.students.length;k++){
+                    if(parseInt(req.body.Student)===data.students[k].Id){
+                        data.students[k].enrolledCourses.push(parseInt(req.params.id));
+                    }
+                }
                 var result = courses[i];
             }
         }
@@ -115,7 +120,7 @@ router.post('/:id/addStudents', (req, res) => {
 
 router.get('/:id/students', (req, res) => {
     var isThere = false;
-    var result = "There seems like nobody has been enrolled";
+    var result = "There seems like nobody has been enrolled or course is not exist";
     //First checking course with id
     for(var i = 0; i<courses.length; i++){
         if(courses[i].Id === parseInt(req.params.id)){

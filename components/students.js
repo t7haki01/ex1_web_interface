@@ -50,6 +50,11 @@ router.post('/:id/addCourses', (req, res) => {
             }
             if(!isEnrolled){
                 students[i].enrolledCourses.push(parseInt(req.body.Course));
+                for(var k = 0; k<data.courses.length;k++){
+                    if(parseInt(req.body.Course)===data.courses[k].Id){
+                        data.courses[k].enrolledStudents.push(parseInt(req.params.id));
+                    }
+                }
                 var result = students[i];
             }
         }
@@ -96,7 +101,7 @@ router.put('/:id', (req, res) => {
 
 router.get('/:id/courses', (req, res) => {
     var isThere = false, isEnrolled = false;
-    var result = "There seems like nothing have enrolled";
+    var result = "There seems like nothing have enrolled or student is not exist";
     //First checking which students with id
     for(var i = 0; i<students.length; i++){
         if(students[i].Id === parseInt(req.params.id)){
